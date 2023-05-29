@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiGridBug.CollectionView">
+    <ContentPage.Content>
+        <Grid RowDefinitions="*">
+            
+        <CollectionView
+            RemainingItemsThreshold="2"
+            RemainingItemsThresholdReached="Coll_OnRemainingItemsThresholdReached"
+            x:Name="coll">
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2"/>
+            </CollectionView.ItemsLayout>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding}"></Label>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+                
+            <CollectionView.Header>
+                <ContentView HeightRequest="400" BackgroundColor="Red"></ContentView>
+            </CollectionView.Header>
+            
+            <CollectionView.Footer>
+                <ContentView Padding="0,0,0,18">
+                    <ActivityIndicator
+                        IsRunning="True"
+                        IsEnabled="True"
+                        HeightRequest="30"
+                        WidthRequest="30"/>
+                </ContentView>
+            </CollectionView.Footer>
+            
+        </CollectionView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
