@@ -1,3 +1,3 @@
 # MauiGridBoxViewBug
 
-[alt text](screenshot.png)
+[Screenshot](screenshot.png)
