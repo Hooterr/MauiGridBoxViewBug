@@ -1,3 +1,3 @@
 # MauiGridBoxViewBug
 
-[Screenshot](screenshot.png)
+<img src ="screenshot.png" width="600"/>
